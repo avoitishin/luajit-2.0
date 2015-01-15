@@ -100,6 +100,8 @@ if exist luajit.exe.manifest^
 
 @del *.obj *.manifest minilua.exe buildvm.exe
 @copy /B /V /Y %LJDLLNAME% %XRAY_16X_GAME%bin_rel\
+@mkdir %XRAY_16X_GAME%bin_rel\lua\jit\
+@copy /A /V /Y jit\*.lua %XRAY_16X_GAME%bin_rel\lua\jit\
 @echo.
 @echo === Successfully built LuaJIT for Windows/%LJARCH% ===
 
